@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhotoPick" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fH-rS-qLu">
+                                <rect key="frame" x="20" y="151" width="374" height="45"/>
+                                <color key="backgroundColor" name="Blue 98% Pale #D2D2F8"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <state key="normal" title="Select Photo">
+                                    <color key="titleColor" name="Blue 75% #4040C0 "/>
+                                </state>
+                                <connections>
+                                    <action selector="selectPhotoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cjC-B6-GFR"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.fill.on.rectangle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7U3-Yq-bqT">
+                                <rect key="frame" x="10" y="236.5" width="394" height="615.5"/>
+                                <color key="tintColor" name="Blue 98% Pale #D2D2F8"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo Picker Demo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wP3-yU-Rbt">
+                                <rect key="frame" x="10" y="64" width="394" height="67"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <color key="textColor" name="Green 98% Pale #D2F8D2"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="Blue 30% #00004D "/>
+                        <constraints>
+                            <constraint firstItem="wP3-yU-Rbt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="4ld-45-OGD"/>
+                            <constraint firstItem="4fH-rS-qLu" firstAttribute="top" secondItem="wP3-yU-Rbt" secondAttribute="bottom" constant="20" id="5qS-bT-CXp"/>
+                            <constraint firstItem="4fH-rS-qLu" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.05" id="DyK-go-7wN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7U3-Yq-bqT" secondAttribute="trailing" constant="10" id="LwX-c9-8Ex"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wP3-yU-Rbt" secondAttribute="trailing" constant="10" id="MU3-5m-74Q"/>
+                            <constraint firstItem="wP3-yU-Rbt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="O8f-2h-g2V"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4fH-rS-qLu" secondAttribute="trailing" constant="20" id="UH3-mh-JdT"/>
+                            <constraint firstItem="wP3-yU-Rbt" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.075" id="hiH-Ae-2ck"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7U3-Yq-bqT" secondAttribute="bottom" constant="10" id="kGn-ob-yRf"/>
+                            <constraint firstItem="7U3-Yq-bqT" firstAttribute="top" secondItem="4fH-rS-qLu" secondAttribute="bottom" constant="40" id="nW7-yp-Iqb"/>
+                            <constraint firstItem="4fH-rS-qLu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qWD-PP-yJu"/>
+                            <constraint firstItem="7U3-Yq-bqT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="yBb-6A-2F3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="photo" destination="7U3-Yq-bqT" id="Dyv-di-qVx"/>
+                        <outlet property="selectPhotoButton" destination="4fH-rS-qLu" id="et5-zx-UL8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="89"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="photo.fill.on.rectangle.fill" catalog="system" width="128" height="96"/>
+        <namedColor name="Blue 30% #00004D ">
+            <color red="0.0" green="0.0" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Blue 75% #4040C0 ">
+            <color red="0.25098039215686274" green="0.25098039215686274" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Blue 98% Pale #D2D2F8">
+            <color red="0.82352941176470584" green="0.82352941176470584" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Green 98% Pale #D2F8D2">
+            <color red="0.82400000095367432" green="0.97299998998641968" blue="0.82400000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
